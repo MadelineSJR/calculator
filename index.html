@@ -1,3 +1,154 @@
-<a href="./Financial_Calculator/">Financial Calculator</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<a href="./PVA_Projection_Calculator/">PVA Projection Calculator</a>
+  <title>Financial Calculators</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: Arial, sans-serif;
+      color: #172033;
+      background: linear-gradient(135deg, #eef3ff, #f7fafc);
+    }
+
+    .container {
+      width: min(900px, 100%);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+    }
+
+    .subtitle {
+      margin: 0 0 32px;
+      color: #667085;
+      line-height: 1.6;
+    }
+
+    .calculator-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .calculator-card {
+      display: block;
+      padding: 30px 24px;
+      border: 1px solid #dbe3ef;
+      border-radius: 18px;
+      color: inherit;
+      background: #ffffff;
+      box-shadow: 0 14px 34px rgba(31, 50, 81, 0.09);
+      text-decoration: none;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .calculator-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 42px rgba(31, 50, 81, 0.15);
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 18px;
+      border-radius: 16px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #173eaa, #2457d6);
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+    }
+
+    .card-description {
+      margin: 0;
+      color: #667085;
+      line-height: 1.5;
+    }
+
+    .open-text {
+      display: inline-block;
+      margin-top: 18px;
+      color: #2457d6;
+      font-weight: 700;
+    }
+
+    @media (max-width: 650px) {
+      .calculator-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <h1>Financial Calculators</h1>
+
+    <p class="subtitle">
+      Choose a calculator to begin.
+    </p>
+
+    <section class="calculator-grid">
+
+      <a
+        class="calculator-card"
+        href="./Financial_Calculator/"
+      >
+        <div class="icon">$</div>
+
+        <h2>Financial Calculator</h2>
+
+        <p class="card-description">
+          Explore financial planning calculations and projections.
+        </p>
+
+        <span class="open-text">
+          Open Calculator →
+        </span>
+      </a>
+
+      <a
+        class="calculator-card"
+        href="./PVA_Projection_calculator/"
+      >
+        <div class="icon">P</div>
+
+        <h2>PVA Projection Calculator</h2>
+
+        <p class="card-description">
+          View policy value and investment projection calculations.
+        </p>
+
+        <span class="open-text">
+          Open Calculator →
+        </span>
+      </a>
+
+    </section>
+  </main>
+</body>
+</html>
