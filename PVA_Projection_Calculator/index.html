@@ -2685,6 +2685,399 @@
       font-weight: 800;
     }
 
+
+    /* ================================================================
+       Combined Growth + Flex workspace
+       ================================================================ */
+    .combined-investment-panel {
+      margin-top: 14px;
+    }
+
+    .combined-account-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .combined-account-card {
+      padding: 14px;
+      border: 1px solid var(--line-ref);
+      border-radius: 3px;
+      background: #ffffff;
+    }
+
+    .growth-account-card {
+      border-top: 4px solid #2457d6;
+    }
+
+    .flex-account-card {
+      border-top: 4px solid #0d9488;
+    }
+
+    .combined-account-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .combined-account-heading h3 {
+      margin: 2px 0 0;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .combined-account-kicker {
+      color: var(--muted-ref);
+      font-family: var(--mono);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .combined-account-tag {
+      padding: 4px 8px;
+      border: 1px solid var(--line-ref);
+      border-radius: 999px;
+      color: var(--muted-ref);
+      font-family: var(--mono);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .combined-account-fields {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .combined-account-fields .full-width {
+      grid-column: auto;
+    }
+
+    .combined-rule-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .combined-rule-stat,
+    .combined-bonus-stat {
+      padding: 10px;
+      border: 1px solid var(--line-ref);
+      border-radius: 2px;
+      background: #fbfaf6;
+    }
+
+    .combined-rule-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .combined-rule-stat span,
+    .combined-bonus-top span {
+      color: var(--muted-ref);
+      font-family: var(--mono);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .combined-rule-stat strong,
+    .combined-bonus-top strong {
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .combined-rule-stat small,
+    .combined-bonus-stat small {
+      color: var(--muted-ref);
+      font-size: 9px;
+      line-height: 1.3;
+    }
+
+    .combined-bonus-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .combined-bonus-rates {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 7px;
+    }
+
+    .combined-bonus-rates span {
+      padding: 3px 6px;
+      border: 1px solid var(--line-ref);
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--muted-ref);
+      font-family: var(--mono);
+      font-size: 8px;
+    }
+
+    .combined-bonus-rates b {
+      color: var(--ink);
+    }
+
+    .combined-allocation-total {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+      margin-top: 10px;
+      padding: 11px 13px;
+      border: 1px solid rgba(31,75,63,.25);
+      background: var(--primary-wash-ref);
+    }
+
+    .combined-allocation-total span {
+      color: var(--muted-ref);
+      font-family: var(--mono);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .combined-allocation-total strong {
+      grid-row: auto;
+      align-self: auto;
+      color: var(--primary-ref);
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .combined-allocation-total small {
+      color: var(--muted-ref);
+      font-size: 9.5px;
+    }
+
+    .summary-grid.combined-overview {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .summary-grid.combined-overview #summaryCard3 {
+      order: 1;
+      grid-column: span 3;
+    }
+
+    .summary-grid.combined-overview #summaryCard7 {
+      order: 2;
+      grid-column: span 3;
+    }
+
+    .summary-grid.combined-overview #summaryCard1 {
+      order: 3;
+      grid-column: span 2;
+    }
+
+    .summary-grid.combined-overview #summaryCard2 {
+      order: 4;
+      grid-column: span 2;
+    }
+
+    .summary-grid.combined-overview #summaryCard8 {
+      order: 5;
+      grid-column: span 2;
+    }
+
+    #projectionBody td.growth-contribution,
+    #projectionBody td.flex-contribution {
+      color: #067647 !important;
+      font-weight: 750;
+    }
+
+    #projectionBody td.combined-payout-positive {
+      background: #ecfdf3 !important;
+      color: #067647 !important;
+      font-weight: 800;
+    }
+
+    @media (max-width: 780px) {
+      .summary-grid.combined-overview {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-grid.combined-overview #summaryCard3,
+      .summary-grid.combined-overview #summaryCard7,
+      .summary-grid.combined-overview #summaryCard1,
+      .summary-grid.combined-overview #summaryCard2,
+      .summary-grid.combined-overview #summaryCard8 {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .combined-account-fields,
+      .combined-rule-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .combined-account-fields .full-width {
+        grid-column: auto;
+      }
+    }
+
+
+    .combined-shared-controls {
+      margin-bottom: 12px;
+      padding: 14px;
+      border: 1px solid rgba(31, 75, 63, 0.28);
+      border-top: 4px solid var(--primary-ref);
+      border-radius: 3px;
+      background: var(--primary-wash-ref);
+    }
+
+    .combined-shared-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .combined-shared-heading h3 {
+      margin: 2px 0 0;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .combined-shared-fields {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .combined-allocation-status {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2px 12px;
+      margin-top: 10px;
+      padding: 9px 11px;
+      border: 1px solid var(--line-ref);
+      background: #ffffff;
+    }
+
+    .combined-allocation-status span,
+    .calculated-allocation-box > span {
+      color: var(--muted-ref);
+      font-family: var(--mono);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .combined-allocation-status strong {
+      grid-row: span 2;
+      align-self: center;
+      color: var(--primary-ref);
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .combined-allocation-status small {
+      color: var(--muted-ref);
+      font-size: 9px;
+      line-height: 1.35;
+    }
+
+    .calculated-allocation-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3px;
+      padding: 10px 11px;
+      border: 1px solid var(--line-ref);
+      border-radius: 2px;
+      background: #fbfaf6;
+    }
+
+    .calculated-allocation-box strong {
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .calculated-allocation-box small {
+      color: var(--muted-ref);
+      font-size: 9px;
+      line-height: 1.3;
+    }
+
+    .input-wrap .input-suffix {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 36px;
+      border-left: 1px solid var(--line-ref);
+      color: var(--muted-ref);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 700px) {
+      .combined-shared-fields {
+        grid-template-columns: 1fr;
+      }
+
+      .combined-allocation-status {
+        grid-template-columns: 1fr;
+      }
+
+      .combined-allocation-status strong {
+        grid-row: auto;
+      }
+    }
+
+
+    .combined-shared-controls .field label {
+      line-height: 1.25;
+    }
+
+    .combined-shared-controls .field .hint {
+      max-width: 100%;
+      font-size: 9px;
+      line-height: 1.3;
+      overflow-wrap: anywhere;
+    }
+
+    .combined-shared-controls input,
+    .combined-shared-controls select {
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+
+    .combined-allocation-status {
+      min-width: 0;
+    }
+
+    .combined-allocation-status small {
+      overflow-wrap: anywhere;
+    }
+
   </style>
 </head>
 <body>
@@ -2734,12 +3127,8 @@
 
                 <div class="header-export-menu" id="headerExportScopeMenu">
                   <label>
-                    <input type="checkbox" name="headerExportMode" value="growth" checked />
-                    <span>Growth</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" name="headerExportMode" value="flex" checked />
-                    <span>Flex</span>
+                    <input type="checkbox" name="headerExportMode" value="growth-flex" checked />
+                    <span>Growth + Flex</span>
                   </label>
                   <label>
                     <input type="checkbox" name="headerExportMode" value="additional-investment" checked />
@@ -2826,23 +3215,18 @@
     </header>
 
     <nav class="plan-tabs" aria-label="Investment projection type">
-      <button class="plan-tab active" type="button" data-mode="growth" aria-selected="true">
+      <button class="plan-tab active" type="button" data-mode="growth-flex" aria-selected="true">
         <span class="n">01</span>
-        <span data-i18n="tab_growth">Growth</span>
-      </button>
-
-      <button class="plan-tab" type="button" data-mode="flex" aria-selected="false">
-        <span class="n">02</span>
-        <span data-i18n="tab_flex">Flex</span>
+        <span data-i18n="tab_combined">Growth + Flex</span>
       </button>
 
       <button class="plan-tab" type="button" data-mode="additional-investment" aria-selected="false">
-        <span class="n">03</span>
+        <span class="n">02</span>
         <span data-i18n="tab_additional">Additional Investment Account</span>
       </button>
 
       <button class="plan-tab" type="button" data-mode="sum-assured" aria-selected="false">
-        <span class="n">04</span>
+        <span class="n">03</span>
         <span data-i18n="tab_sum">Sum Assured</span>
       </button>
 
@@ -2878,7 +3262,7 @@
             </select>
           </div>
 
-          <div class="field annual-fields">
+          <div class="field annual-fields single-annual-fields">
             <label for="amount">
               Annual Amount
               <span class="hint">Annualised premium</span>
@@ -2889,7 +3273,7 @@
             </div>
           </div>
 
-          <div class="field annual-fields">
+          <div class="field annual-fields single-annual-fields">
             <label for="years">
               Years of Investment Contribution
               <span class="hint">Contribution term</span>
@@ -2934,6 +3318,194 @@
               <select id="dividendPayoutYear" aria-label="Dividend Payout Year"></select>
               <span class="input-suffix">year</span>
             </div>
+          </div>
+        </div>
+
+
+        <div class="combined-investment-panel combined-only" id="combinedInvestmentPanel">
+          <section class="combined-shared-controls">
+            <div class="combined-shared-heading">
+              <div>
+                <span class="combined-account-kicker">Shared Inputs</span>
+                <h3>Total Annual Allocation</h3>
+              </div>
+              <span class="combined-account-tag">Growth + Flex</span>
+            </div>
+
+            <div class="combined-shared-fields">
+              <div class="field">
+                <label for="combinedAmount">
+                  Annual Amount
+                  <span class="hint">Total yearly amount</span>
+                </label>
+                <div class="input-wrap">
+                  <span class="input-prefix">$</span>
+                  <input
+                    class="has-prefix"
+                    id="combinedAmount"
+                    type="number"
+                    min="0"
+                    step="100"
+                    value="10000"
+                    inputmode="decimal"
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="combinedYears">
+                  Contribution Years
+                  <span class="hint">Applies to Growth and Flex</span>
+                </label>
+                <select id="combinedYears">
+                  <option value="5" selected>5 years</option>
+                  <option value="10">10 years</option>
+                  <option value="15">15 years</option>
+                  <option value="20">20 years</option>
+                  <option value="25">25 years</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="combined-allocation-status">
+              <span>Allocation Total</span>
+              <strong id="allocationTotalDisplay">100%</strong>
+              <small>Growth + Flex always equals 100%.</small>
+            </div>
+          </section>
+
+          <div class="combined-account-grid">
+            <section class="combined-account-card growth-account-card">
+              <div class="combined-account-heading">
+                <div>
+                  <span class="combined-account-kicker">Option 1</span>
+                  <h3>Growth Account</h3>
+                </div>
+                <span class="combined-account-tag">Growth</span>
+              </div>
+
+              <div class="combined-account-fields">
+                <div class="field">
+                  <label for="growthAllocation">
+                    Growth Allocation
+                    <span class="hint">Percentage of the total Annual Amount</span>
+                  </label>
+                  <div class="input-wrap">
+                    <input
+                      id="growthAllocation"
+                      type="number"
+                      min="0"
+                      max="100"
+                      step="1"
+                      value="50"
+                      inputmode="decimal"
+                    />
+                    <span class="input-suffix">%</span>
+                  </div>
+                </div>
+
+                <div class="calculated-allocation-box">
+                  <span>Calculated Growth Amount</span>
+                  <strong id="growthCalculatedAmount">$5,000</strong>
+                  <small id="growthAllocationFormula">50% of $10,000</small>
+                </div>
+
+                <div class="field full-width">
+                  <label for="growthPayoutYear">
+                    Growth Dividend Payout Year
+                    <span class="hint" id="growthPayoutHint">0 = no payout. Earliest withdrawal is Year 6.</span>
+                  </label>
+                  <select id="growthPayoutYear"></select>
+                </div>
+              </div>
+
+              <div class="combined-rule-grid">
+                <div class="combined-rule-stat">
+                  <span>Admin Charge</span>
+                  <strong id="growthChargeDisplay">3.30%</strong>
+                  <small id="growthChargeNote">Up to Year 8</small>
+                </div>
+
+                <div class="combined-bonus-stat">
+                  <div class="combined-bonus-top">
+                    <span>Welcome Bonus</span>
+                    <strong id="growthBonusAmount">$0</strong>
+                  </div>
+                  <small id="growthBonusTier">Below $30,000 tier</small>
+                  <div class="combined-bonus-rates">
+                    <span>Y1 <b id="growthBonusRate1">1%</b></span>
+                    <span>Y2 <b id="growthBonusRate2">2%</b></span>
+                    <span>Y3 <b id="growthBonusRate3">2%</b></span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="combined-account-card flex-account-card">
+              <div class="combined-account-heading">
+                <div>
+                  <span class="combined-account-kicker">Option 2</span>
+                  <h3>Flex Account</h3>
+                </div>
+                <span class="combined-account-tag">Flex</span>
+              </div>
+
+              <div class="combined-account-fields">
+                <div class="field">
+                  <label for="flexAllocation">
+                    Flex Allocation
+                    <span class="hint">Percentage of the total Annual Amount</span>
+                  </label>
+                  <div class="input-wrap">
+                    <input
+                      id="flexAllocation"
+                      type="number"
+                      min="0"
+                      max="100"
+                      step="1"
+                      value="50"
+                      inputmode="decimal"
+                    />
+                    <span class="input-suffix">%</span>
+                  </div>
+                </div>
+
+                <div class="calculated-allocation-box">
+                  <span>Calculated Flex Amount</span>
+                  <strong id="flexCalculatedAmount">$5,000</strong>
+                  <small id="flexAllocationFormula">50% of $10,000</small>
+                </div>
+
+                <div class="field full-width">
+                  <label for="flexPayoutYear">
+                    Flex Dividend Payout Year
+                    <span class="hint" id="flexPayoutHint">0 = no payout. Select the year to begin withdrawal.</span>
+                  </label>
+                  <select id="flexPayoutYear"></select>
+                </div>
+              </div>
+
+              <div class="combined-rule-grid">
+                <div class="combined-rule-stat">
+                  <span>Admin Charge</span>
+                  <strong id="flexChargeDisplay">3.30%</strong>
+                  <small id="flexChargeNote">Up to Year 8</small>
+                </div>
+
+                <div class="combined-bonus-stat">
+                  <div class="combined-bonus-top">
+                    <span>Welcome Bonus</span>
+                    <strong id="flexBonusAmount">$0</strong>
+                  </div>
+                  <small id="flexBonusTier">Below $30,000 tier</small>
+                  <div class="combined-bonus-rates">
+                    <span>Y1 <b id="flexBonusRate1">1%</b></span>
+                    <span>Y2 <b id="flexBonusRate2">1%</b></span>
+                    <span>Y3 <b id="flexBonusRate3">0%</b></span>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
 
@@ -3261,6 +3833,7 @@
         ph_yourname: { en: "Your name", zh: "您的姓名" },
         tab_growth: { en: "Growth", zh: "增长" },
         tab_flex: { en: "Flex", zh: "灵活" },
+        tab_combined: { en: "Growth + Flex", zh: "增长＋灵活" },
         tab_additional: { en: "Additional Investment Account", zh: "额外投资账户" },
         tab_sum: { en: "Sum Assured", zh: "保额" },
         tab_client: { en: "Client & Download", zh: "客户与下载" },
@@ -3271,7 +3844,18 @@
         tagline: { en: "Mastering Your Blueprint of Wealth", zh: "掌握您的财富蓝图" }
       };
 
-      const TEXT_ZH = {"Financial Planning Tool": "财务规划工具", "Investment Projection": "投资预测", "Growth": "增长",
+      const TEXT_ZH = {"Financial Planning Tool": "财务规划工具", "Investment Projection": "投资预测", "Growth": "增长", "Growth + Flex": "增长＋灵活", "Growth + Flex Projection": "增长＋灵活预测", "Growth + Flex Projection Over Time": "增长＋灵活预测走势", "Year-by-Year Growth + Flex Projection": "增长＋灵活逐年预测", "Growth Account": "增长账户", "Flex Account": "灵活账户", "Growth Annual Amount": "增长年度金额",
+    "Annual Amount": "年度金额",
+    "Contribution Years": "供款年数",
+    "Shared Inputs": "共用输入",
+    "Total Annual Allocation": "年度总配置",
+    "Growth Allocation": "增长配置比例",
+    "Flex Allocation": "灵活配置比例",
+    "Calculated Growth Amount": "计算后的增长金额",
+    "Calculated Flex Amount": "计算后的灵活金额",
+    "Allocation Total": "配置总比例",
+    "Growth Allocation %": "增长配置比例",
+    "Flex Allocation %": "灵活配置比例", "Flex Annual Amount": "灵活年度金额", "Growth Contribution Years": "增长供款年数", "Flex Contribution Years": "灵活供款年数", "Growth Dividend Payout Year": "增长股息派发年份", "Flex Dividend Payout Year": "灵活股息派发年份", "Combined annual allocation": "合计年度配置", "Combined Account Value": "合计账户价值", "Growth Account Value": "增长账户价值", "Flex Account Value": "灵活账户价值", "Growth Final Account Value": "增长最终账户价值", "Flex Final Account Value": "灵活最终账户价值", "Combined Final Account Value": "合计最终账户价值",
     "Growth Projection": "增长预测",
     "Flex Projection": "灵活预测",
     "Sum Assured Projection": "保额预测",
@@ -3458,6 +4042,7 @@
 
 
       const MODES = {
+        COMBINED: "growth-flex",
         GROWTH: "growth",
         FLEX: "flex",
         ADDITIONAL: "additional-investment",
@@ -3469,13 +4054,21 @@
         declaration: "Male Non-Smoker",
         amount: 10000,
         years: 5,
+        combinedAmount: 10000,
+        combinedYears: 5,
+        growthAllocation: 50,
+        flexAllocation: 50,
+        growthAmount: 5000,
+        growthYears: 5,
+        flexAmount: 5000,
+        flexYears: 5,
         fundPrice: 0.97,
         dividendPayout: 0.0051,
         dividendPayoutYear: 0,
         ageRowFilter: ""
       };
 
-      let activeMode = MODES.GROWTH;
+      let activeMode = MODES.COMBINED;
       let latestResult = null;
       let additionalMethod = "combine";
       let additionalEntries = [];
@@ -3484,6 +4077,7 @@
       const columnVisibilityByMode = {};
       const chartVisibilityByMode = {};
       const chartRangeByMode = {
+        [MODES.COMBINED]: 0,
         [MODES.GROWTH]: 0,
         [MODES.FLEX]: 0,
         [MODES.ADDITIONAL]: 0,
@@ -3501,6 +4095,7 @@
         annualFields: [...document.querySelectorAll(".annual-fields")],
         fundFields: [...document.querySelectorAll(".fund-fields")],
         additionalOnly: [...document.querySelectorAll(".additional-only")],
+        combinedOnly: [...document.querySelectorAll(".combined-only")],
 
         workspace: $("projectionWorkspace"),
         inputsCard: $("inputsCard"),
@@ -3549,6 +4144,34 @@
         dividendPayoutYear: $("dividendPayoutYear"),
         payoutYearHint: $("payoutYearHint"),
         payoutYearField: $("payoutYearField"),
+
+        combinedAmount: $("combinedAmount"),
+        combinedYears: $("combinedYears"),
+        growthAllocation: $("growthAllocation"),
+        flexAllocation: $("flexAllocation"),
+        growthCalculatedAmount: $("growthCalculatedAmount"),
+        flexCalculatedAmount: $("flexCalculatedAmount"),
+        growthAllocationFormula: $("growthAllocationFormula"),
+        flexAllocationFormula: $("flexAllocationFormula"),
+        allocationTotalDisplay: $("allocationTotalDisplay"),
+        growthPayoutYear: $("growthPayoutYear"),
+        growthPayoutHint: $("growthPayoutHint"),
+        flexPayoutYear: $("flexPayoutYear"),
+        flexPayoutHint: $("flexPayoutHint"),
+        growthChargeDisplay: $("growthChargeDisplay"),
+        growthChargeNote: $("growthChargeNote"),
+        growthBonusAmount: $("growthBonusAmount"),
+        growthBonusTier: $("growthBonusTier"),
+        growthBonusRate1: $("growthBonusRate1"),
+        growthBonusRate2: $("growthBonusRate2"),
+        growthBonusRate3: $("growthBonusRate3"),
+        flexChargeDisplay: $("flexChargeDisplay"),
+        flexChargeNote: $("flexChargeNote"),
+        flexBonusAmount: $("flexBonusAmount"),
+        flexBonusTier: $("flexBonusTier"),
+        flexBonusRate1: $("flexBonusRate1"),
+        flexBonusRate2: $("flexBonusRate2"),
+        flexBonusRate3: $("flexBonusRate3"),
 
         methodReinvestButton: $("methodReinvestButton"),
         methodPayoutButton: $("methodPayoutButton"),
@@ -3655,16 +4278,28 @@
         maximumFractionDigits: 0
       });
 
+      const isCombined = () => activeMode === MODES.COMBINED;
       const isGrowth = () => activeMode === MODES.GROWTH;
       const isFlex = () => activeMode === MODES.FLEX;
       const isAdditional = () => activeMode === MODES.ADDITIONAL;
       const isSum = () => activeMode === MODES.SUM;
       const isClient = () => false;
-      const isInvestmentMode = () => isGrowth() || isFlex();
+      const isInvestmentMode = () =>
+        isCombined() || isGrowth() || isFlex();
       const isFirstThree = () => isInvestmentMode();
-      const isPayout = () =>
-        isInvestmentMode() &&
-        Number.parseInt(elements.dividendPayoutYear.value, 10) > 0;
+      const isPayout = () => {
+        if (isCombined()) {
+          return (
+            (payoutYearByMode[MODES.GROWTH] || 0) > 0 ||
+            (payoutYearByMode[MODES.FLEX] || 0) > 0
+          );
+        }
+
+        return (
+          (isGrowth() || isFlex()) &&
+          Number.parseInt(elements.dividendPayoutYear.value, 10) > 0
+        );
+      };
 
       function calculateAgeFromBirthday(value) {
         if (!value) return null;
@@ -3774,6 +4409,7 @@
 
       function reportModeLabel(mode) {
         const labels = {
+          [MODES.COMBINED]: "Growth + Flex",
           [MODES.GROWTH]: "Growth",
           [MODES.FLEX]: "Flex",
           [MODES.ADDITIONAL]: "Additional Investment",
@@ -3798,14 +4434,99 @@
         ];
       }
 
-      function getReportValues(mode) {
+      function clampAllocationPercent(value) {
+        const parsed = Number(value);
+        if (!Number.isFinite(parsed)) return 0;
+        return Math.min(100, Math.max(0, parsed));
+      }
+
+      function getCombinedAllocationValues() {
+        const combinedAmount =
+          Number.parseFloat(elements.combinedAmount.value);
+        const years =
+          Number.parseInt(elements.combinedYears.value, 10);
+        const growthAllocation =
+          clampAllocationPercent(elements.growthAllocation.value);
+        const flexAllocation =
+          clampAllocationPercent(elements.flexAllocation.value);
+
         return {
+          combinedAmount,
+          years,
+          combinedYears: years,
+          growthAllocation,
+          flexAllocation,
+          growthAmount:
+            combinedAmount * (growthAllocation / 100),
+          flexAmount:
+            combinedAmount * (flexAllocation / 100),
+          growthYears: years,
+          flexYears: years
+        };
+      }
+
+      function updateAllocationDisplay() {
+        const values = getCombinedAllocationValues();
+        const total =
+          values.growthAllocation + values.flexAllocation;
+
+        elements.growthCalculatedAmount.textContent =
+          money.format(values.growthAmount);
+        elements.flexCalculatedAmount.textContent =
+          money.format(values.flexAmount);
+        elements.growthAllocationFormula.textContent =
+          `${values.growthAllocation.toFixed(0)}% of ${money.format(values.combinedAmount)}`;
+        elements.flexAllocationFormula.textContent =
+          `${values.flexAllocation.toFixed(0)}% of ${money.format(values.combinedAmount)}`;
+        elements.allocationTotalDisplay.textContent =
+          `${total.toFixed(0)}%`;
+        elements.allocationTotalDisplay.classList.toggle(
+          "error-text",
+          Math.abs(total - 100) > 0.001
+        );
+      }
+
+      function setAllocationFrom(source) {
+        if (source === "growth") {
+          const growth =
+            clampAllocationPercent(elements.growthAllocation.value);
+          elements.growthAllocation.value =
+            String(Math.round(growth * 10) / 10);
+          elements.flexAllocation.value =
+            String(Math.round((100 - growth) * 10) / 10);
+        } else {
+          const flex =
+            clampAllocationPercent(elements.flexAllocation.value);
+          elements.flexAllocation.value =
+            String(Math.round(flex * 10) / 10);
+          elements.growthAllocation.value =
+            String(Math.round((100 - flex) * 10) / 10);
+        }
+
+        updateAllocationDisplay();
+      }
+
+      function getReportValues(mode) {
+        const shared = {
           age: Number.parseInt(elements.age.value, 10),
           declaration: elements.declaration.value,
+          fundPrice: Number.parseFloat(elements.fundPrice.value),
+          dividendPayout: Number.parseFloat(elements.dividendPayout.value)
+        };
+
+        if (mode === MODES.COMBINED) {
+          return {
+            ...shared,
+            ...getCombinedAllocationValues(),
+            growthPayoutYear: payoutYearByMode[MODES.GROWTH] || 0,
+            flexPayoutYear: payoutYearByMode[MODES.FLEX] || 0
+          };
+        }
+
+        return {
+          ...shared,
           amount: Number.parseFloat(elements.amount.value),
           years: Number.parseInt(elements.years.value, 10),
-          fundPrice: Number.parseFloat(elements.fundPrice.value),
-          dividendPayout: Number.parseFloat(elements.dividendPayout.value),
           dividendPayoutYear:
             mode === MODES.GROWTH || mode === MODES.FLEX
               ? (payoutYearByMode[mode] || 0)
@@ -3814,6 +4535,41 @@
       }
 
       function validateReportValues(mode, values) {
+        if (mode === MODES.COMBINED) {
+          if (
+            !Number.isFinite(values.combinedAmount) ||
+            values.combinedAmount < 0
+          ) {
+            throw new Error(
+              "Enter a valid total Annual Amount before downloading."
+            );
+          }
+
+          if (
+            !Number.isFinite(values.growthAllocation) ||
+            !Number.isFinite(values.flexAllocation) ||
+            Math.abs(
+              values.growthAllocation +
+              values.flexAllocation -
+              100
+            ) > 0.001
+          ) {
+            throw new Error(
+              "Growth and Flex allocation percentages must total 100%."
+            );
+          }
+
+          if (
+            values.growthAmount > 0 &&
+            values.age >
+              getGrowthTermRule(values.combinedYears).maxAge
+          ) {
+            throw new Error(
+              `Growth ${values.combinedYears}-year term allows a maximum current age of ${getGrowthTermRule(values.combinedYears).maxAge}.`
+            );
+          }
+        }
+
         if (!Number.isInteger(values.age) || values.age < 0 || values.age > 120) {
           throw new Error("Enter a valid current age before downloading.");
         }
@@ -3853,7 +4609,9 @@
           validateReportValues(mode, values);
 
           let result;
-          if (mode === MODES.ADDITIONAL) {
+          if (mode === MODES.COMBINED) {
+            result = combinedInvestmentProjection(values);
+          } else if (mode === MODES.ADDITIONAL) {
             result = additionalInvestmentProjection(values);
           } else if (mode === MODES.SUM) {
             result = sumAssuredProjection(values);
@@ -3863,6 +4621,64 @@
 
           const title = `${reportModeLabel(mode)} Projection`;
           const rangeTables = buildRangeScenarioTables(mode, values);
+
+
+          if (mode === MODES.COMBINED) {
+            return {
+              mode,
+              title,
+              inputs: [
+                ["Current Age", values.age],
+                ["Declaration", values.declaration],
+                ["Annual Amount", values.combinedAmount],
+                ["Contribution Years", values.combinedYears],
+                ["Growth Allocation %", `${values.growthAllocation}%`],
+                ["Calculated Growth Amount", values.growthAmount],
+                ["Growth Dividend Payout Year", values.growthPayoutYear],
+                ["Flex Allocation %", `${values.flexAllocation}%`],
+                ["Calculated Flex Amount", values.flexAmount],
+                ["Flex Dividend Payout Year", values.flexPayoutYear],
+                ["Fund Price", values.fundPrice],
+                ["Monthly Dividend Per Unit", values.dividendPayout],
+                [
+                  "Optimistic / Conservative Range",
+                  `±${getChartRangePercent(mode).toFixed(1)}%`
+                ]
+              ],
+              summary: [
+                ["Total Amount Contributed", result.totalContributed],
+                ["Total Admin Charges", result.totalCharges],
+                ["Combined Final Account Value", result.final.combinedAccountValue],
+                ["Total Dividends Generated", result.totalGenerated],
+                ["Total Dividend Payout", result.totalPayout],
+                ["Total Welcome Bonus", result.totalBonus]
+              ],
+              columns: [
+                ["Year", "year", "number"],
+                ["Age", "age", "number"],
+                ["Growth Contribution", "growthContribution", "money"],
+                ["Growth Welcome Bonus", "growthWelcomeBonus", "money"],
+                ["Growth Admin Charge", "growthAdminCharge", "money"],
+                ["Growth Account Value", "growthAccountValue", "money"],
+                ["Growth Units", "growthUnits", "units"],
+                ["Growth Dividend Payout", "growthDividendPayout", "money"],
+                ["Flex Contribution", "flexContribution", "money"],
+                ["Flex Welcome Bonus", "flexWelcomeBonus", "money"],
+                ["Flex Admin Charge", "flexAdminCharge", "money"],
+                ["Flex Account Value", "flexAccountValue", "money"],
+                ["Flex Units", "flexUnits", "units"],
+                ["Flex Dividend Payout", "flexDividendPayout", "money"],
+                ["Combined Contribution", "combinedContribution", "money"],
+                ["Combined Welcome Bonus", "combinedWelcomeBonus", "money"],
+                ["Combined Admin Charge", "combinedAdminCharge", "money"],
+                ["Combined Account Value", "combinedAccountValue", "money"],
+                ["Combined Dividends Generated", "combinedTotalGenerated", "money"],
+                ["Combined Dividend Payout", "combinedTotalPayout", "money"]
+              ],
+              rows: result.rows,
+              rangeTables
+            };
+          }
 
           if (mode === MODES.GROWTH || mode === MODES.FLEX) {
             const payoutActive = values.dividendPayoutYear > 0;
@@ -3926,7 +4742,16 @@
             };
           }
 
-          if (mode === MODES.ADDITIONAL) {
+          if (mode === MODES.COMBINED) {
+          conservativeResult = combinedInvestmentProjection(
+            values,
+            -adjustment
+          );
+          optimisticResult = combinedInvestmentProjection(
+            values,
+            adjustment
+          );
+        } else if (mode === MODES.ADDITIONAL) {
             return {
               mode,
               title,
@@ -4043,6 +4868,34 @@
       function getExportColumnVisibilityKey(report, column) {
         const property = column[1];
 
+
+        if (report.mode === MODES.COMBINED) {
+          const mapping = {
+            year: "year",
+            age: "age",
+            growthContribution: "growthContribution",
+            growthWelcomeBonus: "growthBonus",
+            growthAdminCharge: "growthAdminCharge",
+            growthAccountValue: "growthValue",
+            growthUnits: "growthUnits",
+            growthDividendPayout: "growthPayout",
+            flexContribution: "flexContribution",
+            flexWelcomeBonus: "flexBonus",
+            flexAdminCharge: "flexAdminCharge",
+            flexAccountValue: "flexValue",
+            flexUnits: "flexUnits",
+            flexDividendPayout: "flexPayout",
+            combinedContribution: "combinedContribution",
+            combinedWelcomeBonus: "combinedBonus",
+            combinedAdminCharge: "combinedAdminCharge",
+            combinedAccountValue: "combinedValue",
+            combinedTotalGenerated: "combinedGenerated",
+            combinedTotalPayout: "combinedPayout"
+          };
+
+          return mapping[property] ?? null;
+        }
+
         if (
           report.mode === MODES.GROWTH ||
           report.mode === MODES.FLEX
@@ -4152,7 +5005,43 @@
 
         let series;
 
-        if (report.mode === MODES.GROWTH || report.mode === MODES.FLEX) {
+
+        if (report.mode === MODES.COMBINED) {
+          series = [
+            {
+              key: "growthValue",
+              label: "Growth Account Value",
+              type: "line",
+              axis: "primary",
+              colour: "#2457d6",
+              accessor: (row) => row.growthAccountValue
+            },
+            {
+              key: "flexValue",
+              label: "Flex Account Value",
+              type: "line",
+              axis: "primary",
+              colour: "#0d9488",
+              accessor: (row) => row.flexAccountValue
+            },
+            {
+              key: "combinedValue",
+              label: "Combined Account Value",
+              type: "line",
+              axis: "primary",
+              colour: "#7c3aed",
+              accessor: (row) => row.combinedAccountValue
+            },
+            {
+              key: "combinedPayout",
+              label: "Total Dividend Payout",
+              type: "line",
+              axis: "primary",
+              colour: "#16a34a",
+              accessor: (row) => row.combinedTotalPayout
+            }
+          ];
+        } else if (report.mode === MODES.GROWTH || report.mode === MODES.FLEX) {
           series = [
             {
               key: "value",
@@ -5935,8 +6824,7 @@
 
       function allReportModes() {
         return [
-          MODES.GROWTH,
-          MODES.FLEX,
+          MODES.COMBINED,
           MODES.ADDITIONAL,
           MODES.SUM
         ];
@@ -6013,6 +6901,14 @@
             declaration: elements.declaration.value,
             amount: elements.amount.value,
             years: elements.years.value,
+            combinedAmount: elements.combinedAmount.value,
+            combinedYears: elements.combinedYears.value,
+            growthAllocation: elements.growthAllocation.value,
+            flexAllocation: elements.flexAllocation.value,
+            growthAmount: getCombinedAllocationValues().growthAmount,
+            growthYears: elements.combinedYears.value,
+            flexAmount: getCombinedAllocationValues().flexAmount,
+            flexYears: elements.combinedYears.value,
             fundPrice: elements.fundPrice.value,
             dividendPayout: elements.dividendPayout.value,
             ageRowFilter: elements.ageRowFilter.value
@@ -6026,6 +6922,7 @@
           columnVisibilityByMode,
           chartVisibilityByMode,
           chartRangeByMode: {
+            [MODES.COMBINED]: getChartRangePercent(MODES.COMBINED),
             [MODES.GROWTH]: getChartRangePercent(MODES.GROWTH),
             [MODES.FLEX]: getChartRangePercent(MODES.FLEX),
             [MODES.ADDITIONAL]: getChartRangePercent(MODES.ADDITIONAL),
@@ -6073,6 +6970,63 @@
         if (inputs.years !== undefined) {
           elements.years.value = String(inputs.years);
         }
+
+        const legacyGrowthAmount =
+          Number(inputs.growthAmount) || 0;
+        const legacyFlexAmount =
+          Number(inputs.flexAmount) || 0;
+        const legacyCombinedAmount =
+          legacyGrowthAmount + legacyFlexAmount;
+
+        const restoredCombinedAmount =
+          inputs.combinedAmount !== undefined
+            ? Number(inputs.combinedAmount)
+            : (
+                legacyCombinedAmount > 0
+                  ? legacyCombinedAmount
+                  : (
+                      inputs.amount !== undefined
+                        ? Number(inputs.amount)
+                        : defaults.combinedAmount
+                    )
+              );
+
+        elements.combinedAmount.value =
+          String(restoredCombinedAmount);
+        elements.combinedYears.value = String(
+          inputs.combinedYears !== undefined
+            ? inputs.combinedYears
+            : (
+                inputs.growthYears !== undefined
+                  ? inputs.growthYears
+                  : (
+                      inputs.years !== undefined
+                        ? inputs.years
+                        : defaults.combinedYears
+                    )
+              )
+        );
+
+        const inferredGrowthAllocation =
+          restoredCombinedAmount > 0
+            ? (legacyGrowthAmount / restoredCombinedAmount) * 100
+            : defaults.growthAllocation;
+
+        elements.growthAllocation.value = String(
+          inputs.growthAllocation !== undefined
+            ? inputs.growthAllocation
+            : inferredGrowthAllocation
+        );
+        elements.flexAllocation.value = String(
+          inputs.flexAllocation !== undefined
+            ? inputs.flexAllocation
+            : (
+                inputs.growthAllocation !== undefined
+                  ? 100 - Number(inputs.growthAllocation)
+                  : 100 - inferredGrowthAllocation
+              )
+        );
+        setAllocationFrom("growth");
         if (inputs.fundPrice !== undefined) {
           elements.fundPrice.value = inputs.fundPrice;
         }
@@ -6151,7 +7105,21 @@
                 : [data.exportPreferences.scope];
           }
 
-          const validModes = savedModes.filter((mode) =>
+          if (
+            savedModes.includes(MODES.GROWTH) ||
+            savedModes.includes(MODES.FLEX)
+          ) {
+            savedModes = [
+              MODES.COMBINED,
+              ...savedModes.filter(
+                (mode) =>
+                  mode !== MODES.GROWTH &&
+                  mode !== MODES.FLEX
+              )
+            ];
+          }
+
+          const validModes = [...new Set(savedModes)].filter((mode) =>
             allReportModes().includes(mode)
           );
 
@@ -6181,9 +7149,15 @@
 
         updateViewControlLabels();
 
-        activeMode = Object.values(MODES).includes(data.activeMode)
-          ? data.activeMode
-          : MODES.GROWTH;
+        activeMode =
+          data.activeMode === MODES.GROWTH ||
+          data.activeMode === MODES.FLEX
+            ? MODES.COMBINED
+            : (
+                Object.values(MODES).includes(data.activeMode)
+                  ? data.activeMode
+                  : MODES.COMBINED
+              );
 
         renderAdditionalEntries();
         setAdditionalMethod(additionalMethod, false);
@@ -6312,24 +7286,24 @@
         return rules[years] || rules[5];
       }
 
-      function getMinimumPayoutYear(years) {
-        if (!isGrowth()) return 1;
+      function getMinimumPayoutYear(
+        years,
+        accountType = isGrowth() ? "growth" : "flex"
+      ) {
+        if (accountType !== "growth") return 1;
         return years === 5 ? 6 : 11;
       }
 
-      function populateDividendPayoutYears() {
-        if (!isInvestmentMode()) return;
-
-        const currentSelection = Number.isInteger(
-          payoutYearByMode[activeMode]
-        )
-          ? payoutYearByMode[activeMode]
-          : Number.parseInt(elements.dividendPayoutYear.value, 10);
-        const years = Number.parseInt(elements.years.value, 10);
+      function fillAccountPayoutSelect(
+        select,
+        hint,
+        accountType,
+        years,
+        currentSelection
+      ) {
         const age = Number.parseInt(elements.age.value, 10);
         const maximumYear = Math.max(1, getMaxProjectionYear(age));
-        const minimumYear = getMinimumPayoutYear(years);
-
+        const minimumYear = getMinimumPayoutYear(years, accountType);
         const allowedYears = [0];
 
         for (
@@ -6340,7 +7314,7 @@
           allowedYears.push(payoutYear);
         }
 
-        elements.dividendPayoutYear.innerHTML = allowedYears
+        select.innerHTML = allowedYears
           .map((payoutYear) => `
             <option value="${payoutYear}">
               ${payoutYear === 0 ? "0 — No payout" : `Year ${payoutYear}`}
@@ -6348,29 +7322,99 @@
           `)
           .join("");
 
-        elements.dividendPayoutYear.value = allowedYears.includes(
-          currentSelection
-        )
+        select.value = allowedYears.includes(currentSelection)
           ? String(currentSelection)
           : "0";
 
-        payoutYearByMode[activeMode] = Number.parseInt(
-          elements.dividendPayoutYear.value,
-          10
+        hint.textContent =
+          accountType === "growth"
+            ? (
+                years === 5
+                  ? "0 = no payout. Earliest withdrawal is Year 6."
+                  : "0 = no payout. Earliest withdrawal is Year 11."
+              )
+            : "0 = no payout. Select the year to begin withdrawal.";
+
+        return Number.parseInt(select.value, 10) || 0;
+      }
+
+      function populateCombinedPayoutYears() {
+        payoutYearByMode[MODES.GROWTH] = fillAccountPayoutSelect(
+          elements.growthPayoutYear,
+          elements.growthPayoutHint,
+          "growth",
+          Number.parseInt(elements.combinedYears.value, 10),
+          payoutYearByMode[MODES.GROWTH] || 0
         );
 
-        if (isGrowth()) {
-          elements.payoutYearHint.textContent =
-            years === 5
-              ? "0 = no payout. Earliest withdrawal is Year 6."
-              : "0 = no payout. Earliest withdrawal is Year 11.";
-        } else {
-          elements.payoutYearHint.textContent =
-            "0 = no payout. Select the year to begin withdrawal.";
+        payoutYearByMode[MODES.FLEX] = fillAccountPayoutSelect(
+          elements.flexPayoutYear,
+          elements.flexPayoutHint,
+          "flex",
+          Number.parseInt(elements.combinedYears.value, 10),
+          payoutYearByMode[MODES.FLEX] || 0
+        );
+      }
+
+      function populateDividendPayoutYears() {
+        if (isCombined()) {
+          populateCombinedPayoutYears();
+          return;
         }
+
+        if (!(isGrowth() || isFlex())) return;
+
+        const currentSelection = Number.isInteger(
+          payoutYearByMode[activeMode]
+        )
+          ? payoutYearByMode[activeMode]
+          : Number.parseInt(elements.dividendPayoutYear.value, 10);
+
+        payoutYearByMode[activeMode] = fillAccountPayoutSelect(
+          elements.dividendPayoutYear,
+          elements.payoutYearHint,
+          isGrowth() ? "growth" : "flex",
+          Number.parseInt(elements.years.value, 10),
+          currentSelection
+        );
       }
 
       function applyGrowthInputRules(setDefaultAmount = false) {
+        if (isCombined()) {
+          const years =
+            Number.parseInt(elements.combinedYears.value, 10);
+          const allocationValues =
+            getCombinedAllocationValues();
+          const rule = getGrowthTermRule(years);
+          const growthIsUsed =
+            Number.isFinite(allocationValues.growthAmount) &&
+            allocationValues.growthAmount > 0;
+
+          elements.age.max = growthIsUsed
+            ? String(rule.maxAge)
+            : "120";
+          elements.ageInputHint.textContent = growthIsUsed
+            ? `Maximum current age ${rule.maxAge} while Growth uses a ${years}-year term`
+            : "Projection ends at age 120";
+
+          const currentAge =
+            Number.parseInt(elements.age.value, 10);
+          if (
+            growthIsUsed &&
+            Number.isInteger(currentAge) &&
+            currentAge > rule.maxAge
+          ) {
+            elements.age.value = String(rule.maxAge);
+          }
+
+          if (setDefaultAmount) {
+            elements.combinedAmount.value =
+              String(rule.defaultAmount);
+            updateAllocationDisplay();
+          }
+          return;
+        }
+
         if (isGrowth()) {
           const years = Number.parseInt(elements.years.value, 10);
           const rule = getGrowthTermRule(years);
@@ -6452,16 +7496,30 @@
       }
 
       function getValues() {
-        return {
+        const shared = {
           age: Number.parseInt(elements.age.value, 10),
           declaration: elements.declaration.value,
+          fundPrice: Number.parseFloat(elements.fundPrice.value),
+          dividendPayout: Number.parseFloat(elements.dividendPayout.value)
+        };
+
+        if (isCombined()) {
+          return {
+            ...shared,
+            ...getCombinedAllocationValues(),
+            growthPayoutYear: payoutYearByMode[MODES.GROWTH] || 0,
+            flexPayoutYear: payoutYearByMode[MODES.FLEX] || 0
+          };
+        }
+
+        return {
+          ...shared,
           amount: Number.parseFloat(elements.amount.value),
           years: Number.parseInt(elements.years.value, 10),
-          fundPrice: Number.parseFloat(elements.fundPrice.value),
-          dividendPayout: Number.parseFloat(elements.dividendPayout.value),
-          dividendPayoutYear: isInvestmentMode()
-            ? (payoutYearByMode[activeMode] || 0)
-            : 0
+          dividendPayoutYear:
+            isGrowth() || isFlex()
+              ? (payoutYearByMode[activeMode] || 0)
+              : 0
         };
       }
 
@@ -6713,57 +7771,147 @@
         const errors = [];
         const invalid = new Set();
 
-        const currentAgeCap = isGrowth()
-          ? getGrowthTermRule(v.years).maxAge
-          : 120;
+        let currentAgeCap = 120;
 
-        if (!Number.isInteger(v.age) || v.age < 0 || v.age > currentAgeCap) {
+        if (isCombined()) {
+          const growthAmount = Number(v.growthAmount);
+          if (Number.isFinite(growthAmount) && growthAmount > 0) {
+            currentAgeCap =
+              getGrowthTermRule(v.growthYears).maxAge;
+          }
+        } else if (isGrowth()) {
+          currentAgeCap = getGrowthTermRule(v.years).maxAge;
+        }
+
+        if (
+          !Number.isInteger(v.age) ||
+          v.age < 0 ||
+          v.age > currentAgeCap
+        ) {
           errors.push(
-            isGrowth()
+            currentAgeCap < 120
               ? `Current Age must be a whole number from 0 to ${currentAgeCap} for the selected Growth term.`
               : "Current Age must be a whole number from 0 to 120."
           );
           invalid.add("age");
         }
 
-        if ((isFirstThree() || isSum()) && (!Number.isFinite(v.amount) || v.amount < 0)) {
+        if (isCombined()) {
+          if (
+            !Number.isFinite(v.combinedAmount) ||
+            v.combinedAmount < 0
+          ) {
+            errors.push("Annual Amount must be zero or more.");
+            invalid.add("combinedAmount");
+          }
+
+          if (
+            !Number.isFinite(v.growthAllocation) ||
+            v.growthAllocation < 0 ||
+            v.growthAllocation > 100
+          ) {
+            errors.push(
+              "Growth Allocation must be from 0% to 100%."
+            );
+            invalid.add("growthAllocation");
+          }
+
+          if (
+            !Number.isFinite(v.flexAllocation) ||
+            v.flexAllocation < 0 ||
+            v.flexAllocation > 100
+          ) {
+            errors.push(
+              "Flex Allocation must be from 0% to 100%."
+            );
+            invalid.add("flexAllocation");
+          }
+
+          if (
+            Math.abs(
+              v.growthAllocation +
+              v.flexAllocation -
+              100
+            ) > 0.001
+          ) {
+            errors.push(
+              "Growth and Flex allocation percentages must total 100%."
+            );
+            invalid.add("growthAllocation");
+            invalid.add("flexAllocation");
+          }
+        } else if (
+          (isGrowth() || isFlex() || isSum()) &&
+          (!Number.isFinite(v.amount) || v.amount < 0)
+        ) {
           errors.push("Annual Amount must be zero or more.");
           invalid.add("amount");
         }
 
-        if ((isFirstThree() || isAdditional()) && (!Number.isFinite(v.fundPrice) || v.fundPrice <= 0)) {
+        if (
+          (isInvestmentMode() || isAdditional()) &&
+          (!Number.isFinite(v.fundPrice) || v.fundPrice <= 0)
+        ) {
           errors.push("Fund Price must be more than zero.");
           invalid.add("fundPrice");
         }
 
-        if ((isFirstThree() || isAdditional()) && (!Number.isFinite(v.dividendPayout) || v.dividendPayout < 0)) {
+        if (
+          (isInvestmentMode() || isAdditional()) &&
+          (!Number.isFinite(v.dividendPayout) || v.dividendPayout < 0)
+        ) {
           errors.push("Dividend Payout must be zero or more.");
           invalid.add("dividendPayout");
         }
 
         const maxYear = getMaxProjectionYear(v.age);
 
-        const minimumPayoutYear = getMinimumPayoutYear(v.years);
+        const validatePayoutYear = (
+          value,
+          accountType,
+          years,
+          inputId
+        ) => {
+          const minimumYear =
+            getMinimumPayoutYear(years, accountType);
 
-        if (
-          isInvestmentMode() &&
-          (
-            !Number.isInteger(v.dividendPayoutYear) ||
-            v.dividendPayoutYear < 0 ||
-            v.dividendPayoutYear > maxYear ||
-            (
-              v.dividendPayoutYear > 0 &&
-              v.dividendPayoutYear < minimumPayoutYear
-            )
-          )
-        ) {
-          errors.push(
-            isGrowth()
-              ? `Dividend Payout Year must be 0 or Year ${minimumPayoutYear} onward for the selected Growth term.`
-              : `Dividend Payout Year must be 0 or a whole number from 1 to ${Math.max(1, maxYear)}.`
+          if (
+            !Number.isInteger(value) ||
+            value < 0 ||
+            value > maxYear ||
+            (value > 0 && value < minimumYear)
+          ) {
+            errors.push(
+              accountType === "growth"
+                ? `Growth Dividend Payout Year must be 0 or Year ${minimumYear} onward.`
+                : `Flex Dividend Payout Year must be 0 or a whole number from 1 to ${Math.max(1, maxYear)}.`
+            );
+            invalid.add(inputId);
+          }
+        };
+
+        if (isCombined()) {
+          validatePayoutYear(
+            v.growthPayoutYear,
+            "growth",
+            v.growthYears,
+            "growthPayoutYear"
           );
-          invalid.add("dividendPayoutYear");
+          validatePayoutYear(
+            v.flexPayoutYear,
+            "flex",
+            v.flexYears,
+            "flexPayoutYear"
+          );
+        } else if (isGrowth() || isFlex()) {
+          validatePayoutYear(
+            v.dividendPayoutYear,
+            isGrowth() ? "growth" : "flex",
+            v.years,
+            "dividendPayoutYear"
+          );
         }
+
 
         if (isAdditional()) {
           normalisedAdditionalEntries().forEach((entry, index) => {
@@ -6771,12 +7919,20 @@
             const yearInputId = `additionalYear-${entry.id}`;
 
             if (!Number.isFinite(entry.amount) || entry.amount < 0) {
-              errors.push(`Additional Investment Account ${index + 1} must be zero or more.`);
+              errors.push(
+                `Additional Investment Account ${index + 1} must be zero or more.`
+              );
               invalid.add(amountInputId);
             }
 
-            if (!Number.isInteger(entry.year) || entry.year < 1 || entry.year > maxYear) {
-              errors.push(`Additional Investment Account ${index + 1} year must be from 1 to ${Math.max(1, maxYear)}.`);
+            if (
+              !Number.isInteger(entry.year) ||
+              entry.year < 1 ||
+              entry.year > maxYear
+            ) {
+              errors.push(
+                `Additional Investment Account ${index + 1} year must be from 1 to ${Math.max(1, maxYear)}.`
+              );
               invalid.add(yearInputId);
             }
           });
@@ -6785,22 +7941,35 @@
         [
           elements.age,
           elements.amount,
+          elements.combinedAmount,
+          elements.growthAllocation,
+          elements.flexAllocation,
           elements.fundPrice,
           elements.dividendPayout,
           elements.dividendPayoutYear,
+          elements.growthPayoutYear,
+          elements.flexPayoutYear,
           ...elements.additionalInvestmentEntries.querySelectorAll("input")
-        ].forEach((input) => {
+        ].filter(Boolean).forEach((input) => {
           input.classList.toggle("invalid", invalid.has(input.id));
         });
 
         elements.errorMessage.textContent = errors.join(" ");
-        elements.errorMessage.classList.toggle("visible", errors.length > 0);
+        elements.errorMessage.classList.toggle(
+          "visible",
+          errors.length > 0
+        );
         return errors.length === 0;
       }
 
       function investmentProjection(v, annualAdjustment = 0) {
         const charge = chargeRule(v.years);
-        const bonus = isFlex() ? flexBonus(v.years, v.amount) : growthBonus(v.years, v.amount);
+        const accountType =
+          v.accountType || (isFlex() ? "flex" : "growth");
+        const bonus =
+          accountType === "flex"
+            ? flexBonus(v.years, v.amount)
+            : growthBonus(v.years, v.amount);
         const projectionYears = getMaxProjectionYear(v.age);
         const rows = [];
 
@@ -6911,6 +8080,130 @@
           totalBonus,
           totalGenerated,
           totalPayout,
+          final
+        };
+      }
+
+
+      function combinedInvestmentProjection(
+        v,
+        annualAdjustment = 0
+      ) {
+        const growthValues = {
+          age: v.age,
+          declaration: v.declaration,
+          amount: v.growthAmount,
+          years: v.growthYears,
+          fundPrice: v.fundPrice,
+          dividendPayout: v.dividendPayout,
+          dividendPayoutYear: v.growthPayoutYear,
+          accountType: "growth"
+        };
+
+        const flexValues = {
+          age: v.age,
+          declaration: v.declaration,
+          amount: v.flexAmount,
+          years: v.flexYears,
+          fundPrice: v.fundPrice,
+          dividendPayout: v.dividendPayout,
+          dividendPayoutYear: v.flexPayoutYear,
+          accountType: "flex"
+        };
+
+        const growth = investmentProjection(
+          growthValues,
+          annualAdjustment
+        );
+        const flex = investmentProjection(
+          flexValues,
+          annualAdjustment
+        );
+
+        const rows = growth.rows.map((growthRow, index) => {
+          const flexRow = flex.rows[index];
+
+          return {
+            year: growthRow.year,
+            age: growthRow.age,
+
+            growthContribution: growthRow.contribution,
+            growthWelcomeBonus: growthRow.welcomeBonus,
+            growthAdminCharge: growthRow.adminCharge,
+            growthAssuranceCharge:
+              growthRow.yearlyAssuranceCharge,
+            growthAccountValue: growthRow.valueInvested,
+            growthUnits: growthRow.units,
+            growthMonthlyDividend: growthRow.monthlyDividend,
+            growthYearlyDividend: growthRow.yearlyDividend,
+            growthDividendPayout: growthRow.dividendPayout,
+            growthTotalGenerated: growthRow.totalGenerated,
+            growthTotalPayout: growthRow.totalPayout,
+
+            flexContribution: flexRow.contribution,
+            flexWelcomeBonus: flexRow.welcomeBonus,
+            flexAdminCharge: flexRow.adminCharge,
+            flexAssuranceCharge: flexRow.yearlyAssuranceCharge,
+            flexAccountValue: flexRow.valueInvested,
+            flexUnits: flexRow.units,
+            flexMonthlyDividend: flexRow.monthlyDividend,
+            flexYearlyDividend: flexRow.yearlyDividend,
+            flexDividendPayout: flexRow.dividendPayout,
+            flexTotalGenerated: flexRow.totalGenerated,
+            flexTotalPayout: flexRow.totalPayout,
+
+            combinedContribution:
+              growthRow.contribution + flexRow.contribution,
+            combinedWelcomeBonus:
+              growthRow.welcomeBonus + flexRow.welcomeBonus,
+            combinedAdminCharge:
+              growthRow.adminCharge + flexRow.adminCharge,
+            combinedAssuranceCharge:
+              growthRow.yearlyAssuranceCharge +
+              flexRow.yearlyAssuranceCharge,
+            combinedAccountValue:
+              growthRow.valueInvested + flexRow.valueInvested,
+            combinedUnits: growthRow.units + flexRow.units,
+            combinedMonthlyDividend:
+              growthRow.monthlyDividend + flexRow.monthlyDividend,
+            combinedYearlyDividend:
+              growthRow.yearlyDividend + flexRow.yearlyDividend,
+            combinedDividendPayout:
+              growthRow.dividendPayout + flexRow.dividendPayout,
+            combinedTotalGenerated:
+              growthRow.totalGenerated + flexRow.totalGenerated,
+            combinedTotalPayout:
+              growthRow.totalPayout + flexRow.totalPayout
+          };
+        });
+
+        const final = rows.at(-1) || {
+          combinedAccountValue: 0,
+          combinedUnits: 0,
+          combinedMonthlyDividend: 0,
+          combinedYearlyDividend: 0,
+          combinedTotalGenerated: 0,
+          combinedTotalPayout: 0
+        };
+
+        return {
+          type: "combined-investment",
+          rows,
+          growth,
+          flex,
+          totalContributed:
+            growth.totalContributed + flex.totalContributed,
+          totalCharges:
+            growth.totalCharges + flex.totalCharges,
+          totalAssuranceCharges:
+            growth.totalAssuranceCharges +
+            flex.totalAssuranceCharges,
+          totalBonus:
+            growth.totalBonus + flex.totalBonus,
+          totalGenerated:
+            growth.totalGenerated + flex.totalGenerated,
+          totalPayout:
+            growth.totalPayout + flex.totalPayout,
           final
         };
       }
@@ -7183,11 +8476,13 @@
         elements.workspace.hidden = false;
 
         elements.firstThreeOnly.forEach((element) => {
-          element.hidden = !isFirstThree();
+          element.hidden =
+            isCombined() || !isInvestmentMode();
         });
 
         elements.annualFields.forEach((element) => {
-          element.hidden = isAdditional();
+          element.hidden =
+            isAdditional() || isCombined();
         });
 
         elements.fundFields.forEach((element) => {
@@ -7198,7 +8493,12 @@
           element.hidden = !isAdditional();
         });
 
-        elements.payoutYearField.hidden = !isInvestmentMode();
+        elements.combinedOnly.forEach((element) => {
+          element.hidden = !isCombined();
+        });
+
+        elements.payoutYearField.hidden =
+          isCombined() || !(isGrowth() || isFlex());
       }
 
       function setPresentation() {
@@ -7231,14 +8531,22 @@
 
         elements.summaryGrid.classList.toggle(
           "growth-flex-overview",
-          isInvestmentMode()
+          (isGrowth() || isFlex())
+        );
+        elements.summaryGrid.classList.toggle(
+          "combined-overview",
+          isCombined()
         );
         elements.summaryGrid.classList.toggle(
           "additional-overview",
           isAdditional()
         );
 
-        if (isFirstThree()) {
+        if (isCombined()) {
+          elements.summaryCardUnits.hidden = true;
+          elements.summaryCardMonthlyDividend.hidden = true;
+          elements.summaryCardYearlyDividend.hidden = true;
+        } else if (isGrowth() || isFlex()) {
           elements.summaryCardUnits.hidden = true;
           elements.summaryCardMonthlyDividend.hidden = true;
           elements.summaryCardYearlyDividend.hidden = true;
@@ -7261,6 +8569,23 @@
         elements.dividendPayoutYear.max = String(
           Math.max(1, getMaxProjectionYear(Number.parseInt(elements.age.value, 10)))
         );
+
+        if (isCombined()) {
+          elements.assumptionText.innerHTML =
+            "<strong>Calculation basis:</strong> Enter one total Annual Amount and one shared Contribution Years term. Allocate the Annual Amount between Growth and Flex using percentages that total 100%. Each allocated dollar amount is then calculated separately using its own welcome bonus, admin-charge schedule, assurance charge, reinvestment, and dividend payout year.";
+
+          elements.chartTitle.textContent =
+            "Growth + Flex Projection Over Time";
+          elements.chartDescription.textContent =
+            "Growth, Flex, and their combined account values are shown together. Total dividend payout is shown as a separate line, up to age 100.";
+          elements.tableTitle.textContent =
+            "Year-by-Year Growth + Flex Projection";
+          elements.tableDescription.textContent =
+            "Combined totals are shown by default. Use Show All to reveal the separate Growth and Flex breakdown through age 120.";
+          elements.footerNote.textContent =
+            "Growth and Flex remain independently calculated. A dividend can be reinvested in one account while being paid out from the other. Combined figures are the sum of both account results for the same year.";
+          return;
+        }
 
         if (isAdditional()) {
           elements.assumptionText.innerHTML =
@@ -7386,6 +8711,223 @@
           : result.bonus.tier;
       }
 
+
+      function updateCombinedRuleDisplays(v, result) {
+        const applyRule = (
+          prefix,
+          accountResult
+        ) => {
+          const charge = accountResult.charge;
+          const bonus = accountResult.bonus;
+          const totalBonusRate = bonus.rates.reduce(
+            (sum, rate) => sum + rate,
+            0
+          );
+
+          elements[`${prefix}ChargeDisplay`].textContent =
+            `${(charge.rate * 100).toFixed(2)}%`;
+          elements[`${prefix}ChargeNote`].textContent =
+            `Up to Year ${charge.duration}`;
+          elements[`${prefix}BonusAmount`].textContent =
+            money.format(accountResult.totalBonus);
+          elements[`${prefix}BonusTier`].textContent = bonus.tier;
+          elements[`${prefix}BonusRate1`].textContent =
+            `${(bonus.rates[0] * 100).toFixed(0)}%`;
+          elements[`${prefix}BonusRate2`].textContent =
+            `${(bonus.rates[1] * 100).toFixed(0)}%`;
+          elements[`${prefix}BonusRate3`].textContent =
+            `${(bonus.rates[2] * 100).toFixed(0)}%`;
+
+          return totalBonusRate;
+        };
+
+        applyRule("growth", result.growth);
+        applyRule("flex", result.flex);
+
+        elements.growthCalculatedAmount.textContent =
+          money.format(v.growthAmount);
+        elements.flexCalculatedAmount.textContent =
+          money.format(v.flexAmount);
+        elements.growthAllocationFormula.textContent =
+          `${v.growthAllocation.toFixed(0)}% of ${money.format(v.combinedAmount)}`;
+        elements.flexAllocationFormula.textContent =
+          `${v.flexAllocation.toFixed(0)}% of ${money.format(v.combinedAmount)}`;
+        elements.allocationTotalDisplay.textContent =
+          `${(v.growthAllocation + v.flexAllocation).toFixed(0)}%`;
+      }
+
+      function updateCombinedSummary(v, result) {
+        elements.metricLabel1.textContent =
+          "Total Amount Contributed";
+        elements.metricLabel2.textContent =
+          "Total Admin Charges";
+        elements.metricLabel3.textContent =
+          "Combined Final Account Value";
+        elements.metricLabel4.textContent =
+          "Final Units";
+        elements.metricLabel5.textContent =
+          "Final Monthly Dividend";
+        elements.metricLabel6.textContent =
+          "Final Combined Yearly Dividend";
+        elements.totalDividendLabel.textContent =
+          "Total Dividends Generated";
+        elements.metricLabel8.textContent =
+          "Total Welcome Bonus";
+
+        elements.totalContributed.textContent =
+          money.format(result.totalContributed);
+        elements.totalCharges.textContent =
+          money.format(result.totalCharges);
+        elements.totalInvested.textContent =
+          money.format(result.final.combinedAccountValue);
+        elements.totalUnits.textContent =
+          unitsFormat.format(result.final.combinedUnits);
+        elements.finalMonthlyDividend.textContent =
+          money.format(result.final.combinedMonthlyDividend);
+        elements.finalYearlyDividend.textContent =
+          money.format(result.final.combinedYearlyDividend);
+        elements.totalDividend.textContent =
+          money.format(result.totalGenerated);
+        elements.combinedValue.textContent =
+          money.format(result.totalBonus);
+
+        elements.contributionFoot.textContent =
+          `${money.format(v.combinedAmount)} × ${v.combinedYears} years · Growth ${v.growthAllocation.toFixed(0)}% (${money.format(v.growthAmount)}) · Flex ${v.flexAllocation.toFixed(0)}% (${money.format(v.flexAmount)})`;
+        elements.chargeFoot.textContent =
+          `Growth ${money.format(result.growth.totalCharges)} · Flex ${money.format(result.flex.totalCharges)}`;
+        elements.metricFoot3.textContent =
+          "Growth and Flex final account values combined";
+        elements.metricFoot4.textContent =
+          "Growth and Flex units combined";
+        elements.metricFoot5.textContent =
+          "Growth and Flex monthly dividends combined";
+        elements.totalDividendFoot.textContent =
+          `Total paid out: ${money.format(result.totalPayout)} · Remaining dividends are reinvested according to each account's payout year`;
+        elements.bonusSummaryFoot.textContent =
+          `Growth ${money.format(result.growth.totalBonus)} · Flex ${money.format(result.flex.totalBonus)}`;
+
+        updateCombinedRuleDisplays(v, result);
+      }
+
+      function updateCombinedTable(rows) {
+        const displayRows = filterRowsByAge(rows);
+        const columns = [
+          { key: "year", label: "Year" },
+          { key: "age", label: "Age" },
+          {
+            key: "growthContribution",
+            label: "Growth Contribution"
+          },
+          {
+            key: "growthBonus",
+            label: "Growth Bonus"
+          },
+          {
+            key: "growthAdminCharge",
+            label: "Growth Admin Charge"
+          },
+          {
+            key: "growthValue",
+            label: "Growth Account Value"
+          },
+          {
+            key: "growthUnits",
+            label: "Growth Units"
+          },
+          {
+            key: "growthPayout",
+            label: "Growth Dividend Payout"
+          },
+          {
+            key: "flexContribution",
+            label: "Flex Contribution"
+          },
+          {
+            key: "flexBonus",
+            label: "Flex Bonus"
+          },
+          {
+            key: "flexAdminCharge",
+            label: "Flex Admin Charge"
+          },
+          {
+            key: "flexValue",
+            label: "Flex Account Value"
+          },
+          {
+            key: "flexUnits",
+            label: "Flex Units"
+          },
+          {
+            key: "flexPayout",
+            label: "Flex Dividend Payout"
+          },
+          {
+            key: "combinedContribution",
+            label: "Combined Contribution"
+          },
+          {
+            key: "combinedBonus",
+            label: "Combined Bonus"
+          },
+          {
+            key: "combinedAdminCharge",
+            label: "Combined Admin Charge"
+          },
+          {
+            key: "combinedValue",
+            label: "Combined Account Value"
+          },
+          {
+            key: "combinedGenerated",
+            label: "Combined Dividends Generated"
+          },
+          {
+            key: "combinedPayout",
+            label: "Combined Dividend Payout"
+          }
+        ];
+
+        elements.projectionHead.innerHTML = `
+          <tr>
+            ${columns.map((column) => `
+              <th data-column="${column.key}">
+                ${column.label}
+              </th>
+            `).join("")}
+          </tr>
+        `;
+
+        elements.projectionBody.innerHTML = displayRows.length
+          ? displayRows.map((row) => `
+            <tr>
+              <td data-column="year"><strong>${row.year}</strong></td>
+              <td data-column="age"><strong>${row.age}</strong></td>
+              <td data-column="growthContribution" class="growth-contribution">${money.format(row.growthContribution)}</td>
+              <td data-column="growthBonus">${money.format(row.growthWelcomeBonus)}</td>
+              <td data-column="growthAdminCharge">${money.format(row.growthAdminCharge)}</td>
+              <td data-column="growthValue" class="positive">${money.format(row.growthAccountValue)}</td>
+              <td data-column="growthUnits">${unitsFormat.format(row.growthUnits)}</td>
+              <td data-column="growthPayout" class="${row.growthDividendPayout > 0 ? "combined-payout-positive" : ""}">${money.format(row.growthDividendPayout)}</td>
+              <td data-column="flexContribution" class="flex-contribution">${money.format(row.flexContribution)}</td>
+              <td data-column="flexBonus">${money.format(row.flexWelcomeBonus)}</td>
+              <td data-column="flexAdminCharge">${money.format(row.flexAdminCharge)}</td>
+              <td data-column="flexValue" class="positive">${money.format(row.flexAccountValue)}</td>
+              <td data-column="flexUnits">${unitsFormat.format(row.flexUnits)}</td>
+              <td data-column="flexPayout" class="${row.flexDividendPayout > 0 ? "combined-payout-positive" : ""}">${money.format(row.flexDividendPayout)}</td>
+              <td data-column="combinedContribution">${money.format(row.combinedContribution)}</td>
+              <td data-column="combinedBonus">${money.format(row.combinedWelcomeBonus)}</td>
+              <td data-column="combinedAdminCharge">${money.format(row.combinedAdminCharge)}</td>
+              <td data-column="combinedValue" class="positive">${money.format(row.combinedAccountValue)}</td>
+              <td data-column="combinedGenerated" class="positive">${money.format(row.combinedTotalGenerated)}</td>
+              <td data-column="combinedPayout" class="${row.combinedDividendPayout > 0 ? "combined-payout-positive" : ""}">${money.format(row.combinedTotalPayout)}</td>
+            </tr>
+          `).join("")
+          : renderNoMatchingRows(columns.length);
+
+        renderColumnSelector(columns);
+      }
+
       function updateAdditionalSummary(result) {
         elements.metricLabel1.textContent = "Total Additional Investment";
         elements.metricLabel2.textContent = "Total 3% Charge";
@@ -7509,7 +9051,9 @@
       function refreshCurrentTable() {
         if (!latestResult) return;
 
-        if (isAdditional()) {
+        if (isCombined()) {
+          updateCombinedTable(latestResult.rows);
+        } else if (isAdditional()) {
           updateAdditionalTable(latestResult.rows);
         } else if (isSum()) {
           updateSumTable(latestResult.rows);
@@ -7526,6 +9070,23 @@
       }
 
       function columnVisibleByDefault(mode, key) {
+        if (mode === MODES.COMBINED) {
+          return ![
+            "growthContribution",
+            "growthBonus",
+            "growthAdminCharge",
+            "growthValue",
+            "growthUnits",
+            "growthPayout",
+            "flexContribution",
+            "flexBonus",
+            "flexAdminCharge",
+            "flexValue",
+            "flexUnits",
+            "flexPayout"
+          ].includes(key);
+        }
+
         if (mode === MODES.GROWTH || mode === MODES.FLEX) {
           return !["fundPrice", "units"].includes(key);
         }
@@ -7930,6 +9491,10 @@
       }
 
       function getRangeValueAccessor(mode = activeMode) {
+        if (mode === MODES.COMBINED) {
+          return (row) => row.combinedAccountValue;
+        }
+
         if (mode === MODES.ADDITIONAL) {
           return (row) => row.cumulativeValueInvested;
         }
@@ -7942,10 +9507,49 @@
       }
 
       function getRangeMainSeriesKey(mode = activeMode) {
+        if (mode === MODES.COMBINED) return "combinedValue";
         return mode === MODES.SUM ? "deathBenefit" : "value";
       }
 
       function getChartSeries(mode = activeMode) {
+
+        if (mode === MODES.COMBINED) {
+          return [
+            {
+              key: "growthValue",
+              label: "Growth Account Value",
+              type: "line",
+              axis: "primary",
+              colour: "#2457d6",
+              accessor: (row) => row.growthAccountValue
+            },
+            {
+              key: "flexValue",
+              label: "Flex Account Value",
+              type: "line",
+              axis: "primary",
+              colour: "#0d9488",
+              accessor: (row) => row.flexAccountValue
+            },
+            {
+              key: "combinedValue",
+              label: "Combined Account Value",
+              type: "line",
+              axis: "primary",
+              colour: "#7c3aed",
+              accessor: (row) => row.combinedAccountValue
+            },
+            {
+              key: "combinedPayout",
+              label: "Total Dividend Payout",
+              type: "line",
+              axis: "primary",
+              colour: "#16a34a",
+              accessor: (row) => row.combinedTotalPayout
+            }
+          ];
+        }
+
         if (mode === MODES.ADDITIONAL) {
           return [
             {
@@ -8615,7 +10219,11 @@
           return;
         }
 
-        if (isAdditional()) {
+        if (isCombined()) {
+          latestResult = combinedInvestmentProjection(v);
+          updateCombinedSummary(v, latestResult);
+          updateCombinedTable(latestResult.rows);
+        } else if (isAdditional()) {
           latestResult = additionalInvestmentProjection(v);
           updateAdditionalSummary(latestResult);
           updateAdditionalTable(latestResult.rows);
@@ -8640,14 +10248,17 @@
       }
 
       function setMode(mode) {
-        if (isInvestmentMode()) {
+        if (isGrowth() || isFlex()) {
           payoutYearByMode[activeMode] =
-            Number.parseInt(elements.dividendPayoutYear.value, 10) || 0;
+            Number.parseInt(
+              elements.dividendPayoutYear.value,
+              10
+            ) || 0;
         }
 
         activeMode = mode;
 
-        if (isInvestmentMode()) {
+        if (isGrowth() || isFlex()) {
           elements.dividendPayoutYear.value = String(
             payoutYearByMode[activeMode] || 0
           );
@@ -8662,11 +10273,22 @@
         elements.declaration.value = defaults.declaration;
         elements.amount.value = defaults.amount;
         elements.years.value = String(defaults.years);
+        elements.combinedAmount.value =
+          defaults.combinedAmount;
+        elements.combinedYears.value =
+          String(defaults.combinedYears);
+        elements.growthAllocation.value =
+          defaults.growthAllocation;
+        elements.flexAllocation.value =
+          defaults.flexAllocation;
+        updateAllocationDisplay();
         elements.fundPrice.value = defaults.fundPrice;
         elements.dividendPayout.value = defaults.dividendPayout;
         elements.dividendPayoutYear.value = defaults.dividendPayoutYear;
         payoutYearByMode[MODES.GROWTH] = 0;
         payoutYearByMode[MODES.FLEX] = 0;
+        elements.growthPayoutYear.value = "0";
+        elements.flexPayoutYear.value = "0";
         Object.values(MODES).forEach((mode) => {
           chartRangeByMode[mode] = 0;
         });
@@ -8705,6 +10327,74 @@
           if (element === elements.age) renderAdditionalEntries();
           update();
         });
+      });
+
+
+      elements.combinedAmount.addEventListener(
+        "input",
+        () => {
+          updateAllocationDisplay();
+          update();
+        }
+      );
+      elements.combinedAmount.addEventListener(
+        "change",
+        () => {
+          updateAllocationDisplay();
+          update();
+        }
+      );
+
+      elements.growthAllocation.addEventListener(
+        "input",
+        () => {
+          setAllocationFrom("growth");
+          applyGrowthInputRules(false);
+          update();
+        }
+      );
+      elements.growthAllocation.addEventListener(
+        "change",
+        () => {
+          setAllocationFrom("growth");
+          applyGrowthInputRules(false);
+          update();
+        }
+      );
+
+      elements.flexAllocation.addEventListener(
+        "input",
+        () => {
+          setAllocationFrom("flex");
+          applyGrowthInputRules(false);
+          update();
+        }
+      );
+      elements.flexAllocation.addEventListener(
+        "change",
+        () => {
+          setAllocationFrom("flex");
+          applyGrowthInputRules(false);
+          update();
+        }
+      );
+
+      elements.combinedYears.addEventListener("change", () => {
+        applyGrowthInputRules(false);
+        populateCombinedPayoutYears();
+        update();
+      });
+
+      elements.growthPayoutYear.addEventListener("change", () => {
+        payoutYearByMode[MODES.GROWTH] =
+          Number.parseInt(elements.growthPayoutYear.value, 10) || 0;
+        update();
+      });
+
+      elements.flexPayoutYear.addEventListener("change", () => {
+        payoutYearByMode[MODES.FLEX] =
+          Number.parseInt(elements.flexPayoutYear.value, 10) || 0;
+        update();
       });
 
       elements.dividendPayoutYear.addEventListener("change", () => {
@@ -8980,6 +10670,7 @@
       syncHeaderClientFields();
       updateViewControlLabels();
       updateHeaderExportScopeLabel();
+      setAllocationFrom("growth");
       renderAdditionalEntries();
       setAdditionalMethod("combine", false);
       update();
